@@ -92,10 +92,10 @@ let register = JSON.parse(fs.readFileSync('./database/user/registered.json'))
 const truth = JSON.parse(fs.readFileSync('./database/truth.json'))
 const dare = JSON.parse(fs.readFileSync('./database/dare.json'))
 // BATAS IMAGE FOLDER //
-const iye = fs.readFileSync('./stik/thumb.jpeg')
+const iye = fs.readFileSync('./stik/thumb.jpg')
 const asw1 = 'https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg'
 const sip = fs.readFileSync('./stik/oksip.jpeg')
-const bgg = fs.readFileSync('./stik/fake.jpeg')
+const bgg = fs.readFileSync('./stik/fake.jpg')
 //// Image ///
 const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
     if (time2 < "24:59:00") {
@@ -146,7 +146,7 @@ ApiZeks = "https://api.zeks.xyz",
 zeksApikey = "Alphabott",
 nomorowner1 = "@6285731855426"; 
 fake = `𝗢𝘄𝗻𝗲𝗿 : ${fakeyoi}\n🌟 ︎ 𝗣𝗿𝗲𝗳𝗶𝘅 :「 ${prefixStatus ? "Multi Prefix" : "No Prefix"} 」`;
-thumb = fs.readFileSync("./stik/thumb.jpeg"); 
+thumb = fs.readFileSync("./stik/thumb.jpg"); 
 numbernye = "0"; 
 waktu = "-";
 alasan = "-"; 
@@ -487,7 +487,7 @@ const freply = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from
 const freply7 = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: '1595603042@s.whatsapp.net' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": iye, "title": `${ucapanWaktu} ${pushname}`, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}
 }
  const fkontak = { 
-                  key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
+                  key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpg')}}}
             //FAKE STICKER
             const fsticker = {
                   key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},"message": {"stickerMessage": { "url": "https://mmg.whatsapp.net/d/f/Am6FBfNf-E2f1VoGBXkPaNAy7L6Tw_HMavKrHEt48QM4.enc","fileSha256": "Yfj8SW7liSEnDakvyVlXVZQ1LJBC9idn09X7KHe8HTc=","fileEncSha256": "F854aUrzgAkBTOVULpne4oSIi6S04Jo56pjZEo+p+9U=","mediaKey": "Z3nA2asclAAwWHngNO/vJ81qxOE2/0gkEnXak+NxPV4=","mimetype": "image/webp","height": 64,"width": 64,"directPath": "/v/t62.15575-24/12097272_1193895144391295_8973688483514349023_n.enc?ccb=11-4&oh=5a9d7147627a8355569f1a641b9ebee3&oe=60C65E73","fileLength": "7186","mediaKeyTimestamp": "1622815545","isAnimated": false}}}
@@ -666,7 +666,7 @@ const ftex = {
               directPath:
                 "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
               mediaKeyTimestamp: "1610993486",
-              jpegThumbnail: fs.readFileSync("./stik/thumb.jpeg"),
+              jpegThumbnail: fs.readFileSync("./stik/thumb.jpg"),
               scansSidecar:
                 "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw==",
             },
@@ -676,7 +676,7 @@ const ftex = {
     };
     const fakethumb = (teks, yes) => {
       xeon.sendMessage(from, teks, image, {
-        thumbnail: fs.readFileSync("./stik/fake.jpeg"),
+        thumbnail: fs.readFileSync("./stik/fake.jpg"),
         quoted: mek,
         caption: yes,
       });
@@ -703,7 +703,7 @@ const ftex = {
               directPath:
                 "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
               mediaKeyTimestamp: "1610993486",
-              jpegThumbnail: fs.readFileSync("./stik/thumb.jpeg"),
+              jpegThumbnail: fs.readFileSync("./stik/thumb.jpg"),
               scansSidecar:
                 "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw==",
             },
@@ -784,7 +784,7 @@ if (!itsMe && !isOwner)return
           product: {
             productImage: {
               mimetype: "image/jpeg",
-              jpegThumbnail: fs.readFileSync(`./stik/thumb.jpeg`), //Gambarnye
+              jpegThumbnail: fs.readFileSync(`./stik/thumb.jpg`), //Gambarnye
             },
             title: "FakeReply Bang", //Kasih namalu
             description: "Xeon",
@@ -926,7 +926,7 @@ const fakeitem = (teks) => {
         	fromMe:false,
         participant:`0@s.whatsapp.net`, ...(from ? {
 remoteJid :"6289523258649-1604595598@g.us" }: {})
-                    },message:{"orderMessage":{"orderId":"174238614569481","thumbnail":fs.readFileSync(`./stik/thumb.jpeg`),"itemCount":10,"status":"INQUIRY","surface":"CATALOG","message":`𝐇𝐚𝐧𝐁𝐨𝐭𝐳`,"token":"AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA=="}}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})}
+                    },message:{"orderMessage":{"orderId":"174238614569481","thumbnail":fs.readFileSync(`./stik/thumb.jpg`),"itemCount":10,"status":"INQUIRY","surface":"CATALOG","message":`𝐇𝐚𝐧𝐁𝐨𝐭𝐳`,"token":"AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA=="}}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})}
 // Katalog
 const reply = (teks) => {
              res = xeon.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 2021, "message": teks, "footerText": "*Han*", "thumbnail": bgg, "surface": 'CATALOG' }}, {quoted:ftrol})
@@ -975,7 +975,7 @@ sendEphemeral: false,
 "mediaType": "2",
 "thumbnailUrl": "https://i.ibb.co/y0RYgzB/FB-IMG-1635413002830.jpg",
 "mediaUrl": "https://youtube.com/channel/UCvAo9TZ0Pw9vrJ_0WYRyO3A",
-"thumbnail": fs.readFileSync('./stik/thumb.jpeg'),
+"thumbnail": fs.readFileSync('./stik/thumb.jpg'),
 "sourceUrl": "",
 },mentionedJid:[sender]}, quoted : fgif})
 };
@@ -1020,7 +1020,7 @@ sendEphemeral: false,
               quotedMessage: {
                 imageMessage: {
                   caption: "*OFFLINE*",
-                  jpegThumbnail: fs.readFileSync("./stik/thumb.jpeg"),
+                  jpegThumbnail: fs.readFileSync("./stik/thumb.jpg"),
                 },
               },
             },
@@ -1055,7 +1055,7 @@ sendEphemeral: false,
                         quotedMessage: {
                           imageMessage: {
                             caption: "*OFFLINE*",
-                            jpegThumbnail: fs.readFileSync("./stik/thumb.jpeg"),
+                            jpegThumbnail: fs.readFileSync("./stik/thumb.jpg"),
                           },
                         },
                       },
@@ -1447,7 +1447,7 @@ ${readmore}
 > ⬡ ${prefix}kickarea
  
 
- ⬣ 𝙈𝘼𝙆𝙄𝙉𝙂 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+ ⬣ 𝙈𝘼𝙆𝙄𝙉𝙂 𝙁𝙀𝘼??𝙐𝙍𝙀𝙎
 > ⬡ ${prefix}sticker
 > ⬡ ${prefix}swm author|packname
 > ⬡ ${prefix}take author|packname
@@ -5679,7 +5679,7 @@ Source : ${anu.result.source}
                   .extendedTextMessage.contextInfo
               : mek;
           delb = await xeon.downloadMediaMessage(boij);
-          fs.writeFileSync(`./stik/fake.jpeg`, delb);
+          fs.writeFileSync(`./stik/fake.jpg`, delb);
           reply("Success");
         } else {
           reply(`Send a picture with a caption ${prefix}sethumb`);
@@ -5698,7 +5698,7 @@ Source : ${anu.result.source}
                   .extendedTextMessage.contextInfo
               : mek;
           delb = await xeon.downloadMediaMessage(boij);
-          fs.writeFileSync(`./stik/thumb.jpeg`, delb);
+          fs.writeFileSync(`./stik/thumb.jpg`, delb);
           reply("Success");
         } else {
           reply(`Send a picture with a caption ${prefix}sethumb`);
